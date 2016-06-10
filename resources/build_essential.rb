@@ -25,7 +25,7 @@ property :compile_time, [true, false], default: false
 action :install do
   case node['platform_family']
   when 'debian'
-    package %w( autoconf binutils-doc bison build-essential flex gettext ncurses-dev )
+    package %w( autoconf binutils-doc bison build-essential flex gettext libncurses5-dev )
   when 'fedora', 'rhel'
     package %w( autoconf bison flex gcc gcc-c++ gettext kernel-devel make m4 ncurses-devel patch )
 
